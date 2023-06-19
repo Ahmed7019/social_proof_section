@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* ## Colors */
+
+  /* ### Primary */
+
+  --Very_Dark_Magenta: hsl(300, 43%, 22%);
+  --Soft_Pink: hsl(333, 80%, 67%);
+
+  /* ### Neutral */
+
+  --Dark_Grayish_Magenta: hsl(303, 10%, 53%);
+  --Light_Grayish_Magenta: hsl(300, 24%, 96%);
+  --White: hsl(0, 0%, 100%);
+}
+
+@font-face {
+  font-family: spartan;
+  src: url(../font/LeagueSpartan-VariableFont_wght.ttf);
+}
+body {
+  font-family: "spartan";
+  background-image: url(../images/bg-pattern-top-desktop.svg),
+    url(../images/bg-pattern-bottom-desktop.svg);
+  background-size: 600px, 1000px;
+  background-position: top left, bottom right;
+  background-repeat: no-repeat, no-repeat;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: fit-content;
+  padding: 70px;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 70px;
+  color: var(--Very_Dark_Magenta);
+}
+
+.intro-head {
+  margin-bottom: 25px;
+  font-weight: bold;
+  font-size: larger;
+}
+
+.intro-text {
+  line-height: 25px;
+}
+
+.ratings {
+  width: 550px;
+  display: flex;
+  display: -ms-flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.ratings div {
+  position: relative;
+  padding: 15px;
+  font-weight: bold;
+  background-color: var(--Light_Grayish_Magenta);
+  border-radius: 10px;
+}
+
+.ratings div span {
+  position: relative;
+  margin-left: 20px;
+  margin-right: 50px;
+}
+
+.first-rate {
+  align-self: flex-start;
+}
+
+.second-rate {
+  align-self: center;
+}
+
+.ratings :nth-child(3) {
+  align-self: flex-end;
+}
+
+main {
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+}
+.card-container {
+    height: 300px;
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.card-container :nth-child(1) {
+    align-self: flex-start;
+}
+.card-container :nth-child(2) {
+    align-self: center;
+}
+.card-container :nth-child(3) {
+    align-self: flex-end;
+}
+
+.card {
+  background-color: var(--Very_Dark_Magenta);
+  width: 350px;
+  height: fit-content;
+  padding: 30px;
+  border-radius: 5px;
+  color: var(--White);
+  margin-right: 25px;
+}
+
+.profile {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.info {
+  margin-left: 25px;
+  display: flex;
+  flex-direction: column;
+  letter-spacing: 1px;
+}
+.job {
+  margin-top: 5px;
+  color: var(--Soft_Pink);
+}
+.profile img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 25px;
+}
+
+main :nth-child(3) {
+  margin-right: 0;
+  align-self: flex-end;
+}
+
+.recom-text {
+  line-height: 25px;
+}
