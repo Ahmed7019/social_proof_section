@@ -32,6 +32,7 @@ body {
   display: grid;
   place-items: center;
   height: 100vh;
+  font-size: 15px;
 }
 
 .container {
@@ -56,22 +57,25 @@ header {
 }
 
 .ratings {
+  position: relative;
   width: 550px;
   display: flex;
   display: -ms-flex;
   display: -webkit-flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  align-content: space-between;
 }
 
 .ratings div {
-  position: relative;
-  padding: 15px;
+  padding: 10px;
   font-weight: bold;
   background-color: var(--Light_Grayish_Magenta);
   border-radius: 10px;
 }
-
+.imgs img {
+  margin-right: 5px;
+}
 .ratings div span {
   position: relative;
   margin-left: 20px;
@@ -90,30 +94,40 @@ header {
   align-self: flex-end;
 }
 
+.first-rate,
+.second-rate,
+.third-rate {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 main {
   display: flex;
   display: -webkit-flex;
   flex-direction: column;
 }
+
 .card-container {
-    height: 300px;
+  height: 300px;
   display: flex;
   display: -webkit-flex;
   flex-direction: row;
   justify-content: space-evenly;
+  position: relative;
 }
 
 .card-container :nth-child(1) {
-    align-self: flex-start;
+  align-self: flex-start;
 }
 .card-container :nth-child(2) {
-    align-self: center;
+  align-self: center;
 }
 .card-container :nth-child(3) {
-    align-self: flex-end;
+  align-self: flex-end;
 }
 
 .card {
+  position: relative;
   background-color: var(--Very_Dark_Magenta);
   width: 350px;
   height: fit-content;
@@ -124,13 +138,17 @@ main {
 }
 
 .profile {
+  position: relative;
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  width: fit-content;
+  height: fit-content;
 }
 
 .info {
-  margin-left: 25px;
+  position: relative;
+  margin-left: 20px;
+  margin-bottom: 25px;
   display: flex;
   flex-direction: column;
   letter-spacing: 1px;
@@ -140,8 +158,8 @@ main {
   color: var(--Soft_Pink);
 }
 .profile img {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   margin-bottom: 25px;
 }
@@ -153,4 +171,76 @@ main :nth-child(3) {
 
 .recom-text {
   line-height: 25px;
+}
+
+/* mobile screen */
+
+@media (max-width: 768px) {
+  body {
+    background-image: url(../images/bg-pattern-top-mobile.svg),
+      url(../images/bg-pattern-bottom-mobile.svg);
+    background-size: 550px, 300px;
+    background-repeat: no-repeat, no-repeat;
+    background-position: top left, bottom right;
+  }
+
+  .container {
+    width: 400px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+  }
+  .ratings {
+    width: 100%;
+  }
+
+  .ratings div {
+    padding: 5px;
+  }
+  .ratings span {
+    margin-bottom: 15px;
+  }
+  .first-rate,
+  .second-rate,
+  .ratings :nth-child(3) {
+    width: 100%;
+    align-self: center;
+    margin-top: 25px;
+  }
+  .imgs {
+    display: flex;
+    display: -webkit-flex;
+    align-items: flex-end;
+    margin-bottom: 10px;
+  }
+
+  .first-rate,
+  .second-rate,
+  .third-rate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .card-container {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .card-container :nth-child(1),
+  .card-container :nth-child(2),
+  .card-container :nth-child(3) {
+    align-self: center;
+    margin-right: 0;
+    margin-top: 15px;
+  }
 }
