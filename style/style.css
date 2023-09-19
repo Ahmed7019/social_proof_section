@@ -204,16 +204,17 @@ main :nth-child(3) {
 
   .ratings div {
     padding: 5px;
+    height: fit-content;
   }
   .ratings span {
-    margin-bottom: 15px;
+    margin-bottom: 25px;
   }
   .first-rate,
   .second-rate,
   .ratings :nth-child(3) {
     width: 100%;
     align-self: center;
-    margin-top: 25px;
+    margin-top: 30px;
   }
   .imgs {
     display: flex;
